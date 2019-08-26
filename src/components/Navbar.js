@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import {Link} from "react-router-dom";
-import "./../style.css"
 
 export default class Navbar extends Component {
     render() {
@@ -8,7 +7,7 @@ export default class Navbar extends Component {
             <div>
                 <nav className="navbar navbar-inverse navbar-fixed-top" style={{backgroundColor: 'white', borderColor: 'transparent'}}>
                     <div className="container-fluid" style={{margin: '15px 30px 15px 30px'}}>
-                    <Link className="navbar-brand" to="./home"><img src={require("./../images/gojek-logo_normal.svg")} className="img-responsive" alt="gojek-logo" /></Link>
+                    <Link className="navbar-brand" to="./"><img src={require("./../Assets/images/gojek-logo_normal.svg")} className="img-responsive" alt="gojek-logo" /></Link>
                     <div className="navbar-header">
                         <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#Navbar">
                         <span className="icon-bar" />

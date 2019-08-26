@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import {Link} from "react-router-dom";
-import "./../style.css";
 
 export default class Footer extends Component {
     render() {
@@ -10,7 +9,7 @@ export default class Footer extends Component {
                     <div className="container-fluid">
                     <div className="row">
                         <div className="col-sm-4">
-                        <img src={require("./../images/logo2.png")} alt="logo2" className="img-responsive" />
+                        <img src={require("./../Assets/images/logo2.png")} alt="logo2" className="img-responsive" />
                         </div>
                         <div className="col-sm-2">
                         <h5 className="text-uppercase">About Gojek</h5>
@@ -67,10 +66,10 @@ export default class Footer extends Component {
                         <h5 className="text-uppercase">Download</h5>
                         <ul className="list-unstyled">
                             <li>
-                            <Link to="#!"><img className="img-responsive logo" src={require("./../images/logo0.png")} alt="logo0" /></Link>
+                            <Link to="#!"><img className="img-responsive logo" src={require("./../Assets/images/logo0.png")} alt="logo0" /></Link>
                             </li>
                             <li>
-                            <Link to="#!"><img className="img-responsive logo" src={require("./../images/logo0.png")} alt="logo0" /></Link>
+                            <Link to="#!"><img className="img-responsive logo" src={require("./../Assets/images/logo0.png")} alt="logo0" /></Link>
                             </li>
                         </ul>
                         </div>

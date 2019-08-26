@@ -1,26 +1,20 @@
 import React, { Component } from 'react';
 import {Link} from "react-router-dom";
-import "./../../style.css";
-import Navbar from "./../Navbar";
+
 import Hero from "./../Hero";
-import Footer from "./../Footer";
-
-
 
 export default class Cendekiawan extends Component {
     render() {
         return (
             <div>
-                <Navbar />
                 <Hero />
-
                 {/* =============================2 GRIDS======================================= */}
                 <div className="container" style={{marginTop: '85px'}}>
                 <div className="row">
                     <h1><b>About Cerdikiawan</b></h1> 
                     <div className="col-sm-6">
                     <Link to="#">
-                        <img className="img-responsive img" src={require("./../../images/isi6.jpg")} alt="isi6" />     
+                        <img className="img-responsive img" src={require("./../../Assets/images/isi6.jpg")} alt="isi6" />     
                     </Link>
                     </div>
                     <div className="col-sm-6" style={{padding: '30px'}}>
@@ -50,7 +44,7 @@ export default class Cendekiawan extends Component {
                     </div>
                     <div className="col-sm-6">
                     <Link to="#">
-                        <img className="img-responsive img" src={require("./../../images/isi7.jpg")} alt="isi7" />     
+                        <img className="img-responsive img" src={require("./../../Assets/images/isi7.jpg")} alt="isi7" />     
                     </Link>
                     </div>
                 </div>
@@ -60,7 +54,7 @@ export default class Cendekiawan extends Component {
                 <div className="row">
                     <div className="col-sm-6">
                     <Link to="#">
-                        <img className="img-responsive img" src={require("./../../images/isi8.jpg")} alt="isi8" />     
+                        <img className="img-responsive img" src={require("./../../Assets/images/isi8.jpg")} alt="isi8" />     
                     </Link>
                     </div>
                     <div className="col-sm-6" style={{padding: '30px'}}>
@@ -77,7 +71,7 @@ export default class Cendekiawan extends Component {
                 {/* =============================1 GRID======================================= */}
                 <div className="container" style={{marginTop: '85px'}}>
                 <div className="row">
-                    <img className="img-responsive img" src={require("./../../images/header1.webp")} alt="header1" /> 
+                    <img className="img-responsive img" src={require("./../../Assets/images/header1.webp")} alt="header1" /> 
                 </div>
                 </div>
                 {/* =============================2 GRIDS======================================= */}
@@ -94,14 +88,14 @@ export default class Cendekiawan extends Component {
                     </div>
                     <div className="col-sm-6">
                     <Link to="#">
-                        <img className="img-responsive img" src={require("./../../images/isi9.jpg")} alt="isi9" />     
+                        <img className="img-responsive img" src={require("./../../Assets/images/isi9.jpg")} alt="isi9" />     
                     </Link>
                     </div>
                 </div>
                 </div>
                 {/* =============================HERO======================================= */}
                 <div className="hero-image" style={{marginTop: '85px'}}>
-                <img className="img-responsive" style={{width: '100%'}} src={require("./../../images/header2.png")} alt="header2" /> 
+                <img className="img-responsive" style={{width: '100%'}} src={require("./../../Assets/images/header2.png")} alt="header2" /> 
                 </div>
                 {/* =============================SLIDER======================================= */}
                 <div className="container" style={{marginTop: '85px', marginBottom: '85px'}}>
@@ -115,13 +109,13 @@ export default class Cendekiawan extends Component {
                     {/* Wrapper for slides */}
                     <div className="carousel-inner">
                     <div className="item active">
-                        <img src={require("./../../images/slidera.png")} alt="slidera" style={{width: '100%'}} />
+                        <img src={require("./../../Assets/images/slidera.png")} alt="slidera" style={{width: '100%'}} />
                     </div>
                     <div className="item">
-                        <img src={require("./../../images/sliderb.png")} alt="sliderb" style={{width: '100%'}} />
+                        <img src={require("./../../Assets/images/sliderb.png")} alt="sliderb" style={{width: '100%'}} />
                     </div>
                     <div className="item">
-                        <img src={require("./../../images/sliderc.png")} alt="sliderc" style={{width: '100%'}} />
+                        <img src={require("./../../Assets/images/sliderc.png")} alt="sliderc" style={{width: '100%'}} />
                     </div>
                     </div>
                     {/* Left and right controls */}
@@ -134,9 +128,7 @@ export default class Cendekiawan extends Component {
                     <span className="sr-only">Next</span>
                     </Link>
                 </div>
-                </div>
-
-                <Footer />     
+                </div>  
             </div>
         )
     }

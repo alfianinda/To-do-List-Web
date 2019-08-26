@@ -1,14 +1,10 @@
 import React, { Component } from 'react';
 import {Link} from "react-router-dom";
-import "./../../style.css";
-import Navbar from "./../Navbar";
-import Footer from "./../Footer";
 
 export default class About extends Component {
     render() {
         return (
             <div>
-                <Navbar />
                 {/* =============================2 GRIDS======================================= */}
                 <div className="container" style={{marginTop: '85px'}}>
                 <div className="row">
@@ -36,7 +32,7 @@ export default class About extends Component {
                     </div>
                     <div className="col-sm-4">
                     <Link to="#">
-                        <img className="img-responsive imgisi" src={require("./../../images/isi2.jpg")} alt="isi2" />     
+                        <img className="img-responsive imgisi" src={require("./../../Assets/images/isi2.jpg")} alt="isi2" />     
                     </Link>
                     </div>
                 </div>
@@ -46,7 +42,7 @@ export default class About extends Component {
                 <div className="row">
                     <div className="col-sm-4">
                     <Link to="#">
-                        <img className="img-responsive imgisi2" src={require("./../../images/isi3.jpg")} alt="isi3" />     
+                        <img className="img-responsive imgisi2" src={require("./../../Assets/images/isi3.jpg")} alt="isi3" />     
                     </Link>
                     </div>
                     <div className="col-sm-8">
@@ -66,14 +62,14 @@ export default class About extends Component {
                 <div className="row">
                     <div className="col-sm-4">
                     <div className="thumbnail" style={{borderColor: 'transparent'}}>
-                        <img className="img-responsive" src={require("./../../images/icon21.png")} alt="icon21" />
+                        <img className="img-responsive" src={require("./../../Assets/images/icon21.png")} alt="icon21" />
                         <h3 className="text-center"><b>Speed</b></h3>
                         <p className="text-center">Our service is fast, and we continually learn and grow from experience. </p>
                     </div>
                     </div>
                     <div className="col-sm-4">
                     <div className="thumbnail" style={{borderColor: 'transparent'}}>
-                        <img className="img-responsive" src={require("./../../images/icon22.png")} alt="icon22" />
+                        <img className="img-responsive" src={require("./../../Assets/images/icon22.png")} alt="icon22" />
                         <h3 className="text-center"><b>Innovation</b></h3>
                         <p className="text-center">We work hard to continuously improve our services, 
                         so that they provide more ease for users.</p>
@@ -81,7 +77,7 @@ export default class About extends Component {
                     </div>
                     <div className="col-sm-4">
                     <div className="thumbnail" style={{borderColor: 'transparent'}}>
-                        <img className="img-responsive" src={require("./../../images/icon23.png")} alt="icon23" />
+                        <img className="img-responsive" src={require("./../../Assets/images/icon23.png")} alt="icon23" />
                         <h3 className="text-center"><b>Social Impact</b></h3>
                         <p className="text-center">We work to create as much positive social impact as possible for Gojek users.</p>
                     </div>
@@ -93,7 +89,7 @@ export default class About extends Component {
                 <div className="row">
                     <div className="col-sm-6">
                     <Link to="#">
-                        <img className="img-responsive img" src={require("./../../images/isi4.jpg")} alt="isi4" />     
+                        <img className="img-responsive img" src={require("./../../Assets/images/isi4.jpg")} alt="isi4" />     
                     </Link>
                     </div>
                     <div className="col-sm-6" style={{padding: '70px'}}>
@@ -144,7 +140,7 @@ export default class About extends Component {
                     </div> 
                     <div className="col-sm-6">
                     <Link to="#">
-                        <img className="img-responsive img" src={require("./../../images/isi5.jpg")} alt="isi5" />     
+                        <img className="img-responsive img" src={require("./../../Assets/images/isi5.jpg")} alt="isi5" />     
                     </Link>
                     </div>
                 </div>
@@ -162,13 +158,13 @@ export default class About extends Component {
                     {/* Wrapper for slides */}
                     <div className="carousel-inner">
                     <div className="item active">
-                        <img src={require("./../../images/slider2.jpeg")} alt="slidera" style={{width: '100%'}} />
+                        <img src={require("./../../Assets/images/slider2.jpeg")} alt="slidera" style={{width: '100%'}} />
                     </div>
                     <div className="item">
-                        <img src={require("./../../images/slider2.jpeg")} alt="sliderb" style={{width: '100%'}} />
+                        <img src={require("./../../Assets/images/slider2.jpeg")} alt="sliderb" style={{width: '100%'}} />
                     </div>
                     <div className="item">
-                        <img src={require("./../../images/slider2.jpeg")} alt="sliderc" style={{width: '100%'}} />
+                        <img src={require("./../../Assets/images/slider2.jpeg")} alt="sliderc" style={{width: '100%'}} />
                     </div>
                     </div>
                     {/* Left and right controls */}
@@ -354,8 +350,6 @@ export default class About extends Component {
                     </div>
                 </div>
                 </div>
-
-                <Footer />
             </div>
         )
     }
