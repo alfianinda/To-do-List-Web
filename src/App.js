@@ -1,26 +1,23 @@
 import React, { Component } from 'react';
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 
-import About from "./components/views/About";
-import Cendekiawan from "./components/views/Cendekiawan";
-import Home from "./components/views/Home";
+import TodoList from "./components/TodoList";
+import TodoEdit from "./components/TodoEdit";
+import Login from "./components/Login";
+import SignUp from "./components/SignUp";
 
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-
-import "./style.css"
+import "./style.css";
 
 export default class App extends Component {
   render() {
     return (
       <Router>
-        <Navbar />
         <Switch>
-          <Route exact path="/" component={Home} />
-          <Route path="/about" component={About} />
-          <Route path="/cendekiawan" component={Cendekiawan} />
+          <Route path="/todolist" component={TodoList} />
+          <Route path="/todoedit:id" component={TodoEdit} />
+          <Route exact path="/" component={Login} />
+          <Route path="/signup" component={SignUp} />
         </Switch>
-        <Footer />
       </Router>
     );
   }
