@@ -10,46 +10,43 @@ class TodoEdit extends Component {
 
         this.state = {
             resultUpdate: [],
-            taskUpdate: "",
-            descUpdate: ""
+            task: "",
+            description: ""
         }
     }
-     
-    //fungsi menampilkan data per id
-    componentDidMount(){
-        var id =this.props.location.state.aidi;
-        console.log(id)
-        axios.get(`https://gatim8.herokuapp.com/api/tasks/${id}`)
-        // .then adalah untuk bersiap menerima respon dari server backend di atas
-        .then((hasilAmbil)=>{
-            console.log(hasilAmbil);
-            console.log(hasilAmbil.data.task)
-            console.log(hasilAmbil.data.description)
-            this.setState({
-                taskUpdate: hasilAmbil.data.task,
-                descUpdate: hasilAmbil.data.description,
-                
-            })
+
+    handleChange = e => {
+        this.setState({
+          [e.target.name]: e.target.value
+        });
+    };
+
+    handleSubmit = async e => {
+        e.preventDefault();
+        try {
+          const i = this.props.match.params.id;
+          const body = {
+            task: this.state.task,
+            description: this.state.description
+          };
+          await axios.put(`https://gatim8.herokuapp.com/api/tasks/${i}`, body);
+          this.props.history.push("/todolist");
+        } catch (error) {
+          console.log(error.response.data);
+        }
+    };
+
+    async componentDidMount() {
+        const id = this.props.match.params.id;
+    
+        const listdata = await axios.get(
+          `https://gatim8.herokuapp.com/api/tasks/${id}`
+        );
+        this.setState({
+          task: listdata.data.task,
+          description: listdata.data.description
         });
     }
-
-    //fungsi perubahan bagian input data 
-    value = (e) =>{
-    this.setState({
-        taskUpdate: e.taskref.value,
-        descUpdate: e.descref.value
-        }) 
-    }
-
-    //supaya tidak terjadi pengulangan submit 2x (prevent default)
-    updateData = (e) =>{
-        e.preventDefault();
-        let formData = new FormData();
-        formData.append('task', this.state.taskUpdate);
-        formData.append('description', this.state.descUpdate);
-        axios.post('https://gatim8.herokuapp.com/api/tasks/', formData);
-    }
-
     
   render() {
     return (
@@ -77,15 +74,16 @@ class TodoEdit extends Component {
                     <div className="col-sm-9">
                         <div className="col-sm-9 box">
                         <div className="col-sm-9">
-                            <form onSubmit={this.updateData}>         
+                            <form onSubmit={this.handleSubmit}>         
                                 <legend>Edit Data</legend>
                                 
                                 <label>Edit Task:</label>
                                 <input type="text" 
                                 className="form-control" 
                                 placeholder="Task..."
-                                ref="taskref"
-                                Value={this.state.taskUpdate}
+                                name="task"
+                                value={this.state.task}
+                                onChange={this.handleChange}
                                 />
                                 <br></br>
 
@@ -93,15 +91,16 @@ class TodoEdit extends Component {
                                 <input type="text" 
                                 className="form-control" 
                                 placeholder="Description..."
-                                ref="descref"
-                                Value={this.state.descUpdate}
+                                name="description"
+                                value={this.state.description}
+                                onChange={this.handleChange}
                                 />
                                 <br></br>
+
+                                <div className="col-sm-9">
+                                    <button className="btn btn-default btn-lg butt"><b>Edit</b></button>
+                                </div>
                             </form>
-                        </div>
-                        <div className="col-sm-9">
-                            {/* <button className="btn btn-default btn-lg butt" type="submit" onClick={this.updateData}><b>Edit</b></button> */}
-                            <button className="btn btn-default btn-lg butt" type="submit" onClick={() => this.value(this.refs)}><b>Edit</b></button>
                         </div>
                         </div>
                     </div>

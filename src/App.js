@@ -14,7 +14,7 @@ export default class App extends Component {
       <Router>
         <Switch>
           <Route path="/todolist" component={TodoList} />
-          <Route path="/todoedit:id" component={TodoEdit} />
+          <Route path="/todoedit/:id" component={TodoEdit} />
           <Route exact path="/" component={Login} />
           <Route path="/signup" component={SignUp} />
         </Switch>
